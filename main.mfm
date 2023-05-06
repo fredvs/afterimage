@@ -115,6 +115,7 @@ object mainfo: tmainfo
     value = 'cheet.png'
     controller.filename = 'cheet.png'
     controller.filter = '"*.png" "*.bmp" "*.jpeg" "*.gif"'
+    controller.options = [fdo_sysfilename, fdo_savelastdir]
     controller.captionopen = 'Choose a image'
     reffontheight = 17
   end
