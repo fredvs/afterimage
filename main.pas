@@ -5,14 +5,14 @@ uses
  msetypes, sysutils, mseglob, mseguiglob, mseguiintf, mseapplication, msestat,
  msemenus,msegui,msegraphics, msegraphutils, mseevent, mseclasses, msewidgets,
  mseforms,mseimage, msetimer, msesimplewidgets, BGRABitmap,BGRADefaultBitmap,
- BGRABitmapTypes, msebitmap, mseact, msedataedits,
- msedropdownlist, mseedit, mseificomp, mseificompglob, mseifiglob, msestatfile,
- msestream, msedatanodes, msedragglob, msegrids, msegridsglob,mselistbrowser,
-  msesys, msefiledialog;
+ BGRABitmapTypes, msebitmap, mseact, msedataedits,msedropdownlist, mseedit,
+  mseificomp, mseificompglob, mseifiglob, msestatfile,msestream, msedatanodes,
+  msedragglob, msegrids, msegridsglob,mselistbrowser,msesys, 
+  msefiledialogx;
 
 type
  tmainfo = class(tmainform)
-    image: TBGRABitmap;
+   image: TBGRABitmap;
    ttimer1: ttimer;
    timage2: timage;
    tbutton2: tbutton;
@@ -25,7 +25,7 @@ type
    tbutton5: tbutton;
    timagelist3: timagelist;
    tframecomp2: tframecomp;
-   tfilenameedit1: tfilenameedit;
+   tfilenameedit1: tfilenameeditx;
    procedure onblinck(const sender: TObject);
    procedure ontim(const sender: TObject);
    procedure onstop(const sender: TObject);
