@@ -36,6 +36,7 @@ type
    procedure onnegat(const sender: TObject);
    procedure ondots(const sender: TObject);
    procedure onchang(const sender: TObject);
+   procedure ondest(const sender: TObject);
  end;
 var
  mainfo: tmainfo;
@@ -151,6 +152,11 @@ begin
   height := image.height + tpaintbox1.top + 4;
   Invert(image);
   ondots(sender);
+end;
+
+procedure tmainfo.ondest(const sender: TObject);
+begin
+image.free;
 end;
  
 end.

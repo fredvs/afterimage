@@ -95,102 +95,8 @@ object mainfo: tmainfo
   }
   windowopacity = -Inf
   oncreated = oncrea
+  ondestroy = ondest
   moduleclassname = 'tmainform'
-  object tlabel1: tlabel
-    taborder = 3
-    bounds_x = 44
-    bounds_y = 32
-    bounds_cx = 229
-    bounds_cy = 17
-    caption = 'Stare at red dot for 20 sec and click Blink.'
-    reffontheight = 17
-  end
-  object tbutton5: tbutton
-    frame.localprops = []
-    frame.localprops1 = []
-    frame.template = tframecomp2
-    taborder = 7
-    bounds_x = 8
-    bounds_y = 4
-    bounds_cx = 62
-    bounds_cy = 24
-    state = [as_localcaption, as_localhint, as_localonexecute]
-    caption = 'Reverse'
-    onexecute = onnegat
-  end
-  object tpaintbox1: tpaintbox
-    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_mousewheel, ow_destroywidgets]
-    frame.localprops = []
-    frame.localprops1 = []
-    taborder = 6
-    onpaint = onpaint
-    bounds_x = 4
-    bounds_y = 66
-    bounds_cx = 382
-    bounds_cy = 544
-  end
-  object tbutton4: tbutton
-    frame.localprops = []
-    frame.localprops1 = []
-    frame.template = tframecomp2
-    taborder = 5
-    bounds_x = 296
-    bounds_y = 36
-    bounds_cx = 46
-    bounds_cy = 24
-    anchors = [an_top, an_right]
-    state = [as_localcaption, as_localhint, as_localonexecute]
-    caption = 'Auto'
-    onexecute = onauto
-  end
-  object tlabel2: tlabel
-    taborder = 4
-    bounds_x = 128
-    bounds_y = 48
-    bounds_cx = 73
-    bounds_cy = 17
-    caption = 'Or click Auto.'
-    reffontheight = 17
-  end
-  object tbutton2: tbutton
-    frame.localprops = []
-    frame.localprops1 = []
-    frame.template = tframecomp2
-    taborder = 1
-    bounds_x = 344
-    bounds_y = 36
-    bounds_cx = 46
-    bounds_cy = 24
-    anchors = [an_top, an_right]
-    state = [as_localcaption, as_localhint, as_localonexecute]
-    caption = 'Blink'
-    onexecute = onblinck
-  end
-  object timage2: timage
-    color = -1610612734
-    frame.localprops = []
-    frame.localprops1 = []
-    visible = False
-    bounds_x = 0
-    bounds_y = 0
-    bounds_cx = 398
-    bounds_cy = 628
-    anchors = []
-  end
-  object tbutton3: tbutton
-    frame.localprops = []
-    frame.localprops1 = []
-    frame.template = tframecomp2
-    taborder = 2
-    bounds_x = 334
-    bounds_y = 36
-    bounds_cx = 42
-    bounds_cy = 24
-    anchors = [an_top, an_right]
-    state = [as_invisible, as_localinvisible, as_localcaption, as_localhint, as_localonexecute]
-    caption = 'Stop'
-    onexecute = onstop
-  end
   object tfilenameedit1: tfilenameeditx
     frame.localprops = []
     frame.localprops1 = []
@@ -204,7 +110,7 @@ object mainfo: tmainfo
     taborder = 8
     bounds_x = 80
     bounds_y = 4
-    bounds_cx = 314
+    bounds_cx = 304
     bounds_cy = 23
     anchors = [an_left, an_top, an_right]
     onchange = onchang
@@ -301,6 +207,107 @@ object mainfo: tmainfo
     controller.showhidden = False
     controller.options = [fdo_sysfilename, fdo_savelastdir]
     reffontheight = 17
+  end
+  object tlabel1: tlabel
+    taborder = 3
+    bounds_x = 20
+    bounds_y = 32
+    bounds_cx = 229
+    bounds_cy = 17
+    caption = 'Stare at red dot for 20 sec and click Blink.'
+    font.height = 12
+    font.name = 'stf_default'
+    font.localprops = [flp_height]
+    reffontheight = 17
+  end
+  object tbutton5: tbutton
+    frame.localprops = []
+    frame.localprops1 = []
+    frame.template = tframecomp2
+    taborder = 7
+    bounds_x = 8
+    bounds_y = 4
+    bounds_cx = 62
+    bounds_cy = 24
+    state = [as_localcaption, as_localhint, as_localonexecute]
+    caption = 'Reverse'
+    onexecute = onnegat
+  end
+  object tpaintbox1: tpaintbox
+    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_mousewheel, ow_destroywidgets]
+    frame.localprops = []
+    frame.localprops1 = []
+    taborder = 6
+    onpaint = onpaint
+    bounds_x = 4
+    bounds_y = 66
+    bounds_cx = 382
+    bounds_cy = 544
+  end
+  object tbutton4: tbutton
+    frame.localprops = []
+    frame.localprops1 = []
+    frame.template = tframecomp2
+    taborder = 5
+    bounds_x = 286
+    bounds_y = 36
+    bounds_cx = 46
+    bounds_cy = 24
+    anchors = [an_top, an_right]
+    state = [as_localcaption, as_localhint, as_localonexecute]
+    caption = 'Auto'
+    onexecute = onauto
+  end
+  object tlabel2: tlabel
+    taborder = 4
+    bounds_x = 104
+    bounds_y = 48
+    bounds_cx = 73
+    bounds_cy = 17
+    caption = 'Or click Auto.'
+    font.height = 12
+    font.name = 'stf_default'
+    font.localprops = [flp_height]
+    reffontheight = 17
+  end
+  object tbutton2: tbutton
+    frame.localprops = []
+    frame.localprops1 = []
+    frame.template = tframecomp2
+    taborder = 1
+    bounds_x = 334
+    bounds_y = 36
+    bounds_cx = 46
+    bounds_cy = 24
+    anchors = [an_top, an_right]
+    state = [as_localcaption, as_localhint, as_localonexecute]
+    caption = 'Blink'
+    onexecute = onblinck
+  end
+  object timage2: timage
+    color = -1610612734
+    frame.localprops = []
+    frame.localprops1 = []
+    visible = False
+    bounds_x = 0
+    bounds_y = 72
+    bounds_cx = 388
+    bounds_cy = 628
+    anchors = [an_top]
+  end
+  object tbutton3: tbutton
+    frame.localprops = []
+    frame.localprops1 = []
+    frame.template = tframecomp2
+    taborder = 2
+    bounds_x = 324
+    bounds_y = 36
+    bounds_cx = 42
+    bounds_cy = 24
+    anchors = [an_top, an_right]
+    state = [as_invisible, as_localinvisible, as_localcaption, as_localhint, as_localonexecute]
+    caption = 'Stop'
+    onexecute = onstop
   end
   object ttimer1: ttimer
     interval = 30000
